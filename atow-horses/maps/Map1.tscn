@@ -1,3 +1,20 @@
 [gd_scene format=3 uid="uid://lbi2vc1gaotw"]
 
+[ext_resource type="Script" uid="uid://bhgdg0vso0cuj" path="res://maps/map_1.gd" id="1_vwdpo"]
+[ext_resource type="Texture2D" uid="uid://nqfyg5v5e1o4" path="res://icon.svg" id="2_noylw"]
+
 [node name="Map1" type="Node2D" unique_id=2144207374]
+script = ExtResource("1_vwdpo")
+
+[node name="Map" type="Polygon2D" parent="." unique_id=1106792364]
+polygon = PackedVector2Array(-638, -125, -398, 63, -120, 94, 147, 125, 318, 63, 403, -31, 333, -121, 248, -138, 373, -174, 422, -219, -306, -236)
+
+[node name="Collision" type="StaticBody2D" parent="." unique_id=450554166]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collision" unique_id=1282098038]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=332074924]
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=939928157]
+position = Vector2(-3, -76)
+texture = ExtResource("2_noylw")
