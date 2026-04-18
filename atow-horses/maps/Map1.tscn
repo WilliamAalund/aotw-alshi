@@ -1,20 +1,48 @@
 [gd_scene format=3 uid="uid://lbi2vc1gaotw"]
 
 [ext_resource type="Script" uid="uid://bhgdg0vso0cuj" path="res://maps/map_1.gd" id="1_vwdpo"]
-[ext_resource type="Texture2D" uid="uid://nqfyg5v5e1o4" path="res://icon.svg" id="2_noylw"]
+[ext_resource type="PackedScene" uid="uid://cjmq5hpd1qbl" path="res://tools/PowerUpSpawner.tscn" id="2_noylw"]
 
-[node name="Map1" type="Node2D" unique_id=2144207374]
+[node name="Map1" type="Node2D" unique_id=2144207374 node_paths=PackedStringArray("map", "collision")]
 script = ExtResource("1_vwdpo")
+map = NodePath("Map")
+collision = NodePath("Collision/CollisionPolygon2D")
 
-[node name="Map" type="Polygon2D" parent="." unique_id=1106792364]
-polygon = PackedVector2Array(-638, -125, -398, 63, -120, 94, 147, 125, 318, 63, 403, -31, 333, -121, 248, -138, 373, -174, 422, -219, -306, -236)
+[node name="Map" type="Polygon2D" parent="." unique_id=725704257]
+color = Color(0.6484881, 0.6484881, 0.6484881, 1)
+invert_enabled = true
+polygon = PackedVector2Array(-396, -282, -479, -294, -527, -265, -538, -182, -502, -92, -466, -61, -452, -29, -465, 7, -475, 42, -460, 105, -471, 167, -455, 234, -412, 286, -321, 301, -260, 296, -203, 295, -125, 292, -34, 273, 0, 208, -25, 131, -39, 97, -50, 41, -19, -18, 56, -61, 117, -42, 137, 5, 128, 89, 136, 167, 153, 219, 209, 267, 265, 284, 323, 286, 365, 267, 396, 208, 404, 152, 402, 92, 423, 50, 446, 60, 483, 105, 525, 109, 549, 84, 564, 42, 566, -17, 530, -48, 488, -57, 444, -46, 416, -29, 380, -12, 360, -15, 338, -43, 331, -70, 326, -95, 329, -120, 334, -151, 335, -177, 327, -205, 302, -230, 274, -249, 232, -268, 189, -273, 157, -263, 126, -249, 89, -223, 61, -209, 31, -204, -28, -215, -62, -232, -117, -251, -145, -262, -175, -265, -215, -262, -276, -244, -304, -204, -310, -149, -285, -124, -249, -107, -182, -65, -179, -43, -209, -31, -263, -28, -302, 14, -285, 46, -220, 69, -179, 77, -140, 108, -157, 128, -207, 131, -253, 130, -268, 164, -243, 206, -276, 229, -321, 211, -346, 161, -352, 105, -345, 61, -327, 5, -329, -53, -340, -98, -349, -157, -354, -223)
+metadata/_edit_lock_ = true
 
 [node name="Collision" type="StaticBody2D" parent="." unique_id=450554166]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collision" unique_id=1282098038]
+build_mode = 1
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=332074924]
 
-[node name="Icon" type="Sprite2D" parent="." unique_id=939928157]
-position = Vector2(-3, -76)
-texture = ExtResource("2_noylw")
+[node name="Spawns" type="Node" parent="." unique_id=1336247764]
+
+[node name="Marker2D" type="Marker2D" parent="Spawns" unique_id=967214938]
+position = Vector2(-481, -240)
+
+[node name="Marker2D3" type="Marker2D" parent="Spawns" unique_id=319007295]
+position = Vector2(-477, -162)
+
+[node name="Marker2D2" type="Marker2D" parent="Spawns" unique_id=1523812038]
+position = Vector2(-417, -215)
+
+[node name="Tools" type="Node" parent="." unique_id=502842361]
+
+[node name="PowerUpSpawner2" parent="Tools" unique_id=132684128 instance=ExtResource("2_noylw")]
+position = Vector2(-228, 163)
+
+[node name="PowerUpSpawner" parent="Tools" unique_id=1009627418 instance=ExtResource("2_noylw")]
+position = Vector2(-237, -187)
+
+[node name="PowerUpSpawner3" parent="Tools" unique_id=717840225 instance=ExtResource("2_noylw")]
+position = Vector2(287, -198)
+
+[node name="PowerUpSpawner4" parent="Tools" unique_id=173440899 instance=ExtResource("2_noylw")]
+position = Vector2(499, 19)
+power_up_type = 1

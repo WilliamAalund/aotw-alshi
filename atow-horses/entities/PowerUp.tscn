@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dwjaxty41dbp8"]
+
+[ext_resource type="Script" uid="uid://ca3sfmrcaj5jn" path="res://entities/power_up.gd" id="1_t7xy6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_thi1i"]
+size = Vector2(30, 30)
+
+[node name="PowerUp" type="Area2D" unique_id=1827549393]
+script = ExtResource("1_t7xy6")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=765711805]
+scale = Vector2(0.03, 0.03)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1211785814]
+shape = SubResource("RectangleShape2D_thi1i")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
