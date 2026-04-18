@@ -3,10 +3,11 @@
 [ext_resource type="Script" uid="uid://bhgdg0vso0cuj" path="res://maps/map_1.gd" id="1_vwdpo"]
 [ext_resource type="PackedScene" uid="uid://cjmq5hpd1qbl" path="res://tools/PowerUpSpawner.tscn" id="2_noylw"]
 
-[node name="Map1" type="Node2D" unique_id=2144207374 node_paths=PackedStringArray("map", "collision")]
+[node name="Map1" type="Node2D" unique_id=2144207374 node_paths=PackedStringArray("map", "collision", "spawns")]
 script = ExtResource("1_vwdpo")
 map = NodePath("Map")
 collision = NodePath("Collision/CollisionPolygon2D")
+spawns = NodePath("Spawns")
 
 [node name="Map" type="Polygon2D" parent="." unique_id=725704257]
 color = Color(0.6484881, 0.6484881, 0.6484881, 1)
