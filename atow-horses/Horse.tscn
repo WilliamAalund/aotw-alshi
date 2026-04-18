@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://s4020yi4ur6x"]
+
+[ext_resource type="Texture2D" uid="uid://cwlfc6gsq4l32" path="res://assets/sad_albanian_horse.png" id="1_hr53a"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dck0m"]
+radius = 22.0
+height = 44.0
+
+[node name="Node2D" type="CharacterBody2D" unique_id=477005895]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1487368354]
+texture = ExtResource("1_hr53a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=687846393]
+position = Vector2(1, 0)
+shape = SubResource("CapsuleShape2D_dck0m")
