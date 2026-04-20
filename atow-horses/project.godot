@@ -15,6 +15,10 @@ run/main_scene="uid://pmwlpocmm76l"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://assets/icon.svg"
 
+[autoload]
+
+Seed="*uid://hxwami0pdsil"
+
 [dotnet]
 
 project/assembly_name="ATOWHorses"
