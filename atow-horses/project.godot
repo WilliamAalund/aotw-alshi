@@ -24,6 +24,7 @@ project/assembly_name="ATOWHorses"
 folder_colors={
 "res://assets/": "blue",
 "res://entities/": "red",
+"res://horses/": "pink",
 "res://main/": "orange",
 "res://maps/": "green",
 "res://tools/": "teal"
