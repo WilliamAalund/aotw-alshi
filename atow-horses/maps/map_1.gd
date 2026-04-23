@@ -1,6 +1,6 @@
 extends Node2D
 
-const horse := preload("res://Horse.tscn")
+const horse := preload("uid://s4020yi4ur6x")
 
 @export var map: Polygon2D
 @export var collision: CollisionPolygon2D
@@ -10,7 +10,7 @@ func _ready() -> void:
 	assert(map != null and collision != null and spawns != null)
 	collision.polygon = map.polygon
 	collision.position = map.position
-	spawn_horses(2)
+	spawn_horses(3)
 
 func spawn_horses(num_horses: int) -> void:
 	var horse_spawns := spawns.get_children()

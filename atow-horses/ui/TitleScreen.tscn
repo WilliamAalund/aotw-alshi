@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dyruj33ckvucr"]
+
+[ext_resource type="Script" uid="uid://c3gs5obbkyc6n" path="res://ui/title_screen.gd" id="1_1fe6l"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ju6wy"]
+font_size = 46
+
+[node name="TitleScreen" type="Control" unique_id=722260229]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1fe6l")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=443036532]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -228.5
+offset_top = -49.5
+offset_right = 228.5
+offset_bottom = 49.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=457853067]
+layout_mode = 2
+text = "Albanian Horse Race"
+label_settings = SubResource("LabelSettings_ju6wy")
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=728512765]
+layout_mode = 2
+text = "Start"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

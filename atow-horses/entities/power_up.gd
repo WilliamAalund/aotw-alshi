@@ -2,7 +2,8 @@ class_name PowerUp extends Node2D
 
 signal collected
 
-var speed_texture := preload("res://assets/placeholder_image.png")
+const SPEED_TEXTURE := preload("res://assets/red_bull.png")
+const FINISH_TEXTURE := preload("res://assets/albanian_passport.jpg")
 
 @onready var sprite := $Sprite2D
 
@@ -13,9 +14,14 @@ enum POWER_UPS{SPEED, FINISH}
 @export var power_up_name: POWER_UPS = POWER_UPS.SPEED
 
 func _ready() -> void:
-	sprite.texture = speed_texture
+	match power_up_name:
+		POWER_UPS.SPEED:
+			sprite.texture = SPEED_TEXTURE
+		POWER_UPS.FINISH:
+			sprite.texture = FINISH_TEXTURE
 
 func _on_body_entered(body: Node2D) -> void:
-	print("I was collected by", body)
+	if body is Horse:
+		body.apply_powerup(power_up_name)
 	collected.emit()
 	queue_free()

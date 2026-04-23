@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://cjmq5hpd1qbl"]
 
-[ext_resource type="Script" uid="uid://dpsocuw3sj6j" path="res://tools/power_up_spawner.gd" id="1_cfv2h"]
+[ext_resource type="Script" uid="uid://dpsocuw3sj6j" path="res://map-systems/power_up_spawner.gd" id="1_cfv2h"]
 [ext_resource type="Texture2D" uid="uid://l1qh6ka8ivks" path="res://assets/placeholder_image.png" id="2_s2kr4"]
 
 [node name="PowerUpSpawner" type="Node2D" unique_id=132684128]
 script = ExtResource("1_cfv2h")
 
 [node name="Timer" type="Timer" parent="." unique_id=508549095]
-wait_time = 3.0
+wait_time = 2.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=578750664]
 modulate = Color(1, 1, 1, 0.3137255)

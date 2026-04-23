@@ -18,6 +18,7 @@ config/icon="res://assets/icon.svg"
 [autoload]
 
 Seed="*uid://hxwami0pdsil"
+GameSignals="*uid://cl52tq8dllbk6"
 
 [dotnet]
 
@@ -30,8 +31,9 @@ folder_colors={
 "res://entities/": "red",
 "res://horses/": "pink",
 "res://main/": "orange",
+"res://map-systems/": "teal",
 "res://maps/": "green",
-"res://tools/": "teal"
+"res://ui/": "pink"
 }
 
 [physics]

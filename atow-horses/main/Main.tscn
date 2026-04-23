@@ -1,3 +1,16 @@
 [gd_scene format=3 uid="uid://pmwlpocmm76l"]
 
+[ext_resource type="PackedScene" uid="uid://dq2psbjdcupcp" path="res://main/Game.tscn" id="1_qv31u"]
+[ext_resource type="PackedScene" uid="uid://dyruj33ckvucr" path="res://ui/TitleScreen.tscn" id="1_wbnyf"]
+[ext_resource type="PackedScene" uid="uid://del4cit8454nt" path="res://ui/VictoryScreen.tscn" id="3_5kcm4"]
+
 [node name="Main" type="Node" unique_id=951506225]
+
+[node name="TitleScreen" parent="." unique_id=722260229 instance=ExtResource("1_wbnyf")]
+
+[node name="Game" parent="." unique_id=1075534539 instance=ExtResource("1_qv31u")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1131294721]
+layer = 2
+
+[node name="VictoryScreen" parent="CanvasLayer" unique_id=1046232030 instance=ExtResource("3_5kcm4")]

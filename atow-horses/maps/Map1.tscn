@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://lbi2vc1gaotw"]
 
 [ext_resource type="Script" uid="uid://bhgdg0vso0cuj" path="res://maps/map_1.gd" id="1_vwdpo"]
-[ext_resource type="PackedScene" uid="uid://cjmq5hpd1qbl" path="res://tools/PowerUpSpawner.tscn" id="2_noylw"]
+[ext_resource type="PackedScene" uid="uid://cjmq5hpd1qbl" path="res://map-systems/PowerUpSpawner.tscn" id="2_noylw"]
 
 [node name="Map1" type="Node2D" unique_id=2144207374 node_paths=PackedStringArray("map", "collision", "spawns")]
 script = ExtResource("1_vwdpo")
