@@ -3,6 +3,7 @@ class_name Horse extends CharacterBody2D
 signal finished_race
 
 @onready var horse_sprite: = $Sprite2D
+@onready var bounce_sfx = $Thud
 
 const MAX_COLLISION_OFFSET := 0.4
 const BASE_SPEED := 100
@@ -31,6 +32,7 @@ func handle_collision(collision) -> void:
 	var offset = Vector2(randf_range(-MAX_COLLISION_OFFSET, MAX_COLLISION_OFFSET), randf_range(-MAX_COLLISION_OFFSET, MAX_COLLISION_OFFSET))
 	var normal = (collision.get_normal() + offset).normalized()
 	direction = direction.bounce(normal)
+	bounce_sfx.play()
 	# or get new direction randomly
 	#direction = Vector2.from_angle(randf_range(0, TAU))
 
