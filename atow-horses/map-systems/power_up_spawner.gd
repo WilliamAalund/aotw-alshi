@@ -31,4 +31,5 @@ func _on_timer_timeout() -> void:
 # Respawns a new powerup, and prevents spawning multiple powerups in the same position
 func _on_powerup_collected() -> void:
 	spawned_powerup = false
-	timer.start()
+	if (power_up_type == PowerUp.POWER_UPS.SPEED):
+		timer.start()

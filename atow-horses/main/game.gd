@@ -22,6 +22,7 @@ func _on_game_finish() -> void:
 	print("Finishing game...")
 	end_sfx.play()
 	assert(map != null)
+	map.pause_horses()
 	map.set_process(false)
 
 func _on_to_main() -> void:

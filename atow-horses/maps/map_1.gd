@@ -25,6 +25,14 @@ func spawn_horses(num_horses: int) -> void:
 		add_child(new_horse)
 	
 	await get_tree().create_timer(7.5).timeout
+	unpause_horses()
+	
+func pause_horses() -> void:
+	var all_horses = get_tree().get_nodes_in_group("horses")
+	for horse in all_horses:
+		horse.paused = true
+		
+func unpause_horses() -> void:
 	var all_horses = get_tree().get_nodes_in_group("horses")
 	for horse in all_horses:
 		horse.paused = false
