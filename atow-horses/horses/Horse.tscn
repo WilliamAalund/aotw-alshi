@@ -23,4 +23,4 @@ shape = SubResource("CapsuleShape2D_dck0m")
 [node name="Thud" type="AudioStreamPlayer" parent="." unique_id=269538005]
 stream = ExtResource("3_rs76j")
 volume_db = -16.877
-pitch_scale = 1.6
+pitch_scale = 1.41

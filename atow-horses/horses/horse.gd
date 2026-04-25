@@ -11,6 +11,7 @@ const SPEED_ITEM_BOOST_MAGNITUDE = 25
 
 var direction: Vector2 = Vector2(0.5, 0.5).normalized()
 var speed: int = BASE_SPEED;
+@export var paused = true
 
 func _ready() -> void:
 	# start with a random normalized direction vector
@@ -19,13 +20,14 @@ func _ready() -> void:
 	direction = Vector2.from_angle(randf_range(0, TAU)).normalized()
 
 func _physics_process(delta: float) -> void:
-	velocity = direction * speed
 	
-	var collision = move_and_collide(velocity * delta)
-	if collision:
-		handle_collision(collision)
-	
-	move_and_slide()
+	if (!(paused)):
+		velocity = direction * speed
+		var collision = move_and_collide(velocity * delta)
+		if collision:
+			handle_collision(collision)
+		
+		move_and_slide()
 
 func handle_collision(collision) -> void:
 	# get new direction based off of collison angle with a random offset
@@ -44,3 +46,4 @@ func apply_powerup(powerup: PowerUp.POWER_UPS) -> void:
 			print("Hooray! I finished the race!")
 			finished_race.emit()
 			GameSignals.finish_game.emit()
+			

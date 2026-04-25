@@ -20,5 +20,11 @@ func spawn_horses(num_horses: int) -> void:
 	# This assumes that all children of spawns are Node2Ds
 	for i in range(num_horses):
 		var new_horse = horse.instantiate()
+		new_horse.add_to_group("horses")
 		new_horse.global_position = horse_spawns[i].global_position
 		add_child(new_horse)
+	
+	await get_tree().create_timer(7.5).timeout
+	var all_horses = get_tree().get_nodes_in_group("horses")
+	for horse in all_horses:
+		horse.paused = false
