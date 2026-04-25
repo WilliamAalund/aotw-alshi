@@ -1,6 +1,14 @@
 [gd_scene format=3 uid="uid://dq2psbjdcupcp"]
 
 [ext_resource type="Script" uid="uid://c65sc7rdhvjd5" path="res://main/game.gd" id="1_85o73"]
+[ext_resource type="AudioStream" uid="uid://hckbo2444d0n" path="res://assets/sfx/trumpet.mp3" id="2_nadq4"]
+[ext_resource type="AudioStream" uid="uid://cpnflyjcy3b4w" path="res://assets/sfx/neigh.mp3" id="3_s7p8s"]
 
 [node name="Game" type="Node" unique_id=1075534539]
 script = ExtResource("1_85o73")
+
+[node name="StartPlayer" type="AudioStreamPlayer" parent="." unique_id=434163915]
+stream = ExtResource("2_nadq4")
+
+[node name="EndPlayer" type="AudioStreamPlayer" parent="." unique_id=64801929]
+stream = ExtResource("3_s7p8s")
