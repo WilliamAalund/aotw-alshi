@@ -265,7 +265,7 @@ _data = {
 
 [sub_resource type="LabelSettings" id="LabelSettings_f88p8"]
 font_size = 50
-outline_size = 8
+outline_size = 16
 outline_color = Color(0, 0, 0, 1)
 
 [node name="VictoryScreen" type="Control" unique_id=1046232030]
@@ -328,6 +328,7 @@ offset_left = 5.0
 offset_right = 536.0
 offset_bottom = 173.0
 grow_vertical = 2
+text = "tesy"
 label_settings = SubResource("LabelSettings_f88p8")
 horizontal_alignment = 1
 
