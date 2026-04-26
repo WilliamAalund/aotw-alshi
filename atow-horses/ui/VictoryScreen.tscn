@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dqx5rcunn5fs3" path="res://assets/albanian_citizen.webp" id="1_f88p8"]
 [ext_resource type="Texture2D" uid="uid://cwlfc6gsq4l32" path="res://assets/sad_albanian_horse.png" id="2_6j8wp"]
 [ext_resource type="Texture2D" uid="uid://dkxp14yswtw1e" path="res://assets/albanian_background.jpg" id="2_hyev6"]
+[ext_resource type="AudioStream" uid="uid://cyr4rylbrosgw" path="res://assets/sfx/ericadams.wav" id="5_kbex1"]
 
 [sub_resource type="Animation" id="Animation_hyev6"]
 length = 0.001
@@ -346,5 +347,9 @@ offset_bottom = -17.0
 grow_horizontal = 0
 grow_vertical = 0
 text = "Continue"
+
+[node name="eric_adams_player" type="AudioStreamPlayer" parent="." unique_id=1474159358]
+stream = ExtResource("5_kbex1")
+volume_db = 4.105
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

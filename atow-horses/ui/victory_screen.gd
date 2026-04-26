@@ -2,6 +2,7 @@ extends Control
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var winner_name = $Label
+@onready var eric_adams = $eric_adams_player
 
 func _ready() -> void:
 	GameSignals.to_main.connect(_on_to_main)
@@ -13,6 +14,7 @@ func play_victory_screen(horse_name: String) -> void:
 	await animation_player.animation_finished
 	animation_player.play("victory")
 	await animation_player.animation_finished
+	eric_adams.play()
 
 func _on_finish_game(horse_name: String) -> void:
 	play_victory_screen(horse_name)
