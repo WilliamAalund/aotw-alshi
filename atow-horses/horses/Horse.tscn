@@ -4,8 +4,8 @@
 [ext_resource type="AudioStream" uid="uid://cj6npvx171h1e" path="res://assets/sfx/bounce.wav" id="3_rs76j"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dck0m"]
-radius = 22.0
-height = 44.0
+radius = 21.0
+height = 52.0
 
 [node name="Node2D" type="CharacterBody2D" unique_id=477005895]
 script = ExtResource("1_dck0m")
@@ -15,7 +15,7 @@ position = Vector2(3.0000002, 0)
 scale = Vector2(2, 2)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=687846393]
-position = Vector2(1, 0)
+position = Vector2(1, 5)
 shape = SubResource("CapsuleShape2D_dck0m")
 
 [node name="Thud" type="AudioStreamPlayer" parent="." unique_id=269538005]
