@@ -48,7 +48,7 @@ func apply_powerup(powerup: PowerUp.POWER_UPS) -> void:
 		PowerUp.POWER_UPS.FINISH:
 			print("Hooray! I finished the race!")
 			finished_race.emit()
-			GameSignals.finish_game.emit(horse_name)
+			GameSignals.finish_game.emit(horse_name, horse_sprite.texture)
 			
 func update_name(name : String) -> void:
 	if not is_node_ready():
