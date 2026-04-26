@@ -4,6 +4,7 @@ signal finished_race
 
 @onready var horse_sprite: = $Sprite2D
 @onready var bounce_sfx = $Thud
+@onready var horse_label = $horse_label
 
 const MAX_COLLISION_OFFSET := 0.4
 const BASE_SPEED := 100
@@ -11,7 +12,9 @@ const SPEED_ITEM_BOOST_MAGNITUDE = 25
 
 var direction: Vector2 = Vector2(0.5, 0.5).normalized()
 var speed: int = BASE_SPEED;
-@export var paused = true
+@onready var paused = true
+@onready var horse_name = ""
+
 
 func _ready() -> void:
 	# start with a random normalized direction vector
@@ -45,5 +48,13 @@ func apply_powerup(powerup: PowerUp.POWER_UPS) -> void:
 		PowerUp.POWER_UPS.FINISH:
 			print("Hooray! I finished the race!")
 			finished_race.emit()
-			GameSignals.finish_game.emit()
+			GameSignals.finish_game.emit(horse_name)
 			
+func update_name(name : String) -> void:
+	if not is_node_ready():
+		await ready 
+	horse_name = name
+	horse_label.text = horse_name
+	
+func hide_label() -> void:
+	horse_label.visible = false

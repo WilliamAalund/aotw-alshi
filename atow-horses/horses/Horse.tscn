@@ -22,3 +22,12 @@ shape = SubResource("CapsuleShape2D_dck0m")
 stream = ExtResource("3_rs76j")
 volume_db = -16.877
 pitch_scale = 1.41
+
+[node name="horse_label" type="Label" parent="." unique_id=1374547969]
+offset_left = -57.0
+offset_top = 26.0
+offset_right = 58.0
+offset_bottom = 49.0
+horizontal_alignment = 1
+clip_text = true
+text_overrun_behavior = 3

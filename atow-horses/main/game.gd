@@ -18,7 +18,7 @@ func _on_game_start() -> void:
 	add_child(map)
 	start_sfx.play()
 
-func _on_game_finish() -> void:
+func _on_game_finish(horse_name: String) -> void:
 	print("Finishing game...")
 	end_sfx.play()
 	assert(map != null)

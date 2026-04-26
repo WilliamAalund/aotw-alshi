@@ -15,6 +15,7 @@ func _ready() -> void:
 
 func spawn_horses(num_horses: int) -> void:
 	var horse_spawns := spawns.get_children()
+	var horse_names = ["Souvlaki","Natural Bridge","Toxicity"]
 	
 	assert(horse_spawns.size() >= num_horses)
 	
@@ -24,6 +25,7 @@ func spawn_horses(num_horses: int) -> void:
 		
 		new_horse.add_to_group("horses")
 		new_horse.global_position = horse_spawns[i].global_position
+		new_horse.update_name(horse_names[i])
 		add_child(new_horse)
 		new_horse.get_node("Sprite2D").texture = horse_textures[i]
 	
@@ -39,3 +41,4 @@ func unpause_horses() -> void:
 	var all_horses = get_tree().get_nodes_in_group("horses")
 	for horse in all_horses:
 		horse.paused = false
+		horse.hide_label()
