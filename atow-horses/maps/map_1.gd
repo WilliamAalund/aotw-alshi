@@ -2,6 +2,7 @@ extends Node2D
 
 const horse := preload("uid://s4020yi4ur6x")
 
+@export var horse_textures: Array[Texture2D]
 @export var map: Polygon2D
 @export var collision: CollisionPolygon2D
 @export var spawns: Node
@@ -20,9 +21,11 @@ func spawn_horses(num_horses: int) -> void:
 	# This assumes that all children of spawns are Node2Ds
 	for i in range(num_horses):
 		var new_horse = horse.instantiate()
+		
 		new_horse.add_to_group("horses")
 		new_horse.global_position = horse_spawns[i].global_position
 		add_child(new_horse)
+		new_horse.get_node("Sprite2D").texture = horse_textures[i]
 	
 	await get_tree().create_timer(7.5).timeout
 	unpause_horses()

@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://s4020yi4ur6x"]
 
 [ext_resource type="Script" uid="uid://cf7t4hnnu3it3" path="res://horses/horse.gd" id="1_dck0m"]
-[ext_resource type="Texture2D" uid="uid://dadfp7q71dxoj" path="res://assets/white_horse.png" id="2_dck0m"]
 [ext_resource type="AudioStream" uid="uid://cj6npvx171h1e" path="res://assets/sfx/bounce.wav" id="3_rs76j"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dck0m"]
@@ -14,7 +13,6 @@ script = ExtResource("1_dck0m")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1487368354]
 position = Vector2(3.0000002, 0)
 scale = Vector2(2, 2)
-texture = ExtResource("2_dck0m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=687846393]
 position = Vector2(1, 0)

@@ -15,8 +15,8 @@ var speed: int = BASE_SPEED;
 
 func _ready() -> void:
 	# start with a random normalized direction vector
-	horse_sprite.modulate = Color(randf_range(0, 1),randf_range(0, 1),randf_range(0, 1),1)
-	print(horse_sprite.modulate)
+	# horse_sprite.modulate = Color(randf_range(0, 1),randf_range(0, 1),randf_range(0, 1),1)
+	# print(horse_sprite.modulate)
 	direction = Vector2.from_angle(randf_range(0, TAU)).normalized()
 
 func _physics_process(delta: float) -> void:
