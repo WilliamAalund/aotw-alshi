@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cjmq5hpd1qbl" path="res://map-systems/PowerUpSpawner.tscn" id="2_noylw"]
 [ext_resource type="Texture2D" uid="uid://iq3jj3150ush" path="res://assets/silver_jews_horse.png" id="2_oicbt"]
 [ext_resource type="Texture2D" uid="uid://djfyepdu3qd0b" path="res://assets/slowdive_horse.png" id="3_63i5o"]
-[ext_resource type="Texture2D" uid="uid://3roaptowh24q" path="res://assets/serj_horse.png" id="4_55yl8"]
+[ext_resource type="Texture2D" uid="uid://bkyw487f0cc5m" path="res://assets/serj_horse.png" id="4_55yl8"]
 
 [node name="Map1" type="Node2D" unique_id=2144207374 node_paths=PackedStringArray("map", "collision", "spawns")]
 script = ExtResource("1_vwdpo")
