@@ -44,3 +44,4 @@ folder_colors={
 
 textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
+environment/defaults/default_clear_color=Color(0.25439999, 0.39351997, 0.48, 1)
