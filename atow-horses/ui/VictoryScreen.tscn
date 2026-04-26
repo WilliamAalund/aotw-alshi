@@ -328,7 +328,6 @@ offset_left = 5.0
 offset_right = 536.0
 offset_bottom = 173.0
 grow_vertical = 2
-text = "Jovil Merriment won!"
 label_settings = SubResource("LabelSettings_f88p8")
 horizontal_alignment = 1
 
