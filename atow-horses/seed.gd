@@ -1,12 +1,13 @@
 extends Node
 
-var global_seed = "serj-tankian"
+var global_seed = 123459789
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var temp = global_seed.hash()
-	seed(temp)
-	print("using seed ", temp)
+	randomize()
+	global_seed = randi()
+	seed(global_seed)
+	print("using seed ", global_seed)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
